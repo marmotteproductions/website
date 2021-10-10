@@ -1,3 +1,26 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://www.marmotteproductions.ch"
+languageCode = "fr-CH"
+title = "Marmotte Productions Sàrl"
+theme = "yourfolio"
+disableKinds = [ "RSS", "taxonomy", "taxonomyTerm" ]
+
+
+[[menu.main]]
+name = "Projets"
+weight = 1
+url = "/"
+
+[[menu.main]]
+name = "À propos"
+weight = 2
+url = "/apropos"
+
+[[menu.main]]
+name = "Contact"
+weight = 3
+url = "/contact"
+
+[params]
+env = "development"
+logoImage = "img/logo.png"
+logoImageAlt = "Marmotte Productions Sàrl"
