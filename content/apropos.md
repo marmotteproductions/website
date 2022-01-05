@@ -22,7 +22,7 @@ text_groups:
 portraits:
   - title: Charlotte Klinke
     type: Co-fondatrice et productrice
-    link: nous/charlotte
+    link: charlotte
     class: short-col
     image:
       url: /img/charlotte.png
@@ -35,7 +35,7 @@ portraits:
       - options: 360x318
   - title: Gaspard Vignon
     type: Co-fondateur, gérant et producteur
-    link: nous/gaspard
+    link: gaspard
     class: short-col
     image:
       url: /img/gaspard.png
