@@ -109,6 +109,19 @@
     margin-bottom: 0.472em;
   }
 
+  &-labell {
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &-email {
+    color: $group-text-color;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+
   &-content {
     color: $group-text-color;
     font-size: 1.8em;
@@ -206,6 +219,10 @@
 
     &-label {
       margin-bottom: 0.625em;
+    }
+
+    &-labell {
+      margin-bottom: 0;
     }
   }
 }
@@ -307,6 +324,10 @@
 
   .projects {
     margin-top: 10em;
+  }
+
+  .portraits {
+    margin-top: 5em;
   }
 }
 
