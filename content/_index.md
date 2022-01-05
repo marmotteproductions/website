@@ -1,11 +1,11 @@
 ---
 title: Index
-date: 2017-11-01T18:28:28+02:00
+date: 2022-01-04T15:50:45
 draft: false
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cumque magnam aliquid, explicabo amet quasi eveniet reprehenderit dolorum exercitationem maiores provident ex error, tenetur.
+description: Page index du site (texte descriptif court + liste projets en cours)
 
 header:
-  description: Nous sommes <span class="accent-text">Marmotte Productions Sàrl</span>. Bienvenue.
+  description: Bienvenue dans la tanière de <span class="accent-text">Marmotte Productions</span> !
   image:
     url: home-hero.png
     alt: The top of mountain image

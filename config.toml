@@ -1,26 +1,30 @@
 baseURL = "https://marmotteproductions.github.io/marmotteprod-siteproto/"
 languageCode = "fr-CH"
-title = "Marmotte Productions Sàrl"
+title = "Marmotte Productions"
 theme = "yourfolio"
 disableKinds = [ "RSS", "taxonomy", "taxonomyTerm" ]
 
+[[menu.main]]
+name = "News"
+weight = 1
+url = "/news"
 
 [[menu.main]]
 name = "Projets"
-weight = 1
-url = "/"
+weight = 2
+url = "/projets"
 
 [[menu.main]]
 name = "À propos"
-weight = 2
+weight = 3
 url = "/apropos"
 
 [[menu.main]]
 name = "Contact"
-weight = 3
+weight = 4
 url = "/contact"
 
 [params]
 env = "development"
 logoImage = "img/logo.png"
-logoImageAlt = "Marmotte Productions Sàrl"
+logoImageAlt = "Marmotte Productions"
