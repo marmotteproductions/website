@@ -4,6 +4,7 @@ date: 2022-01-04T15:50:45
 draft: false
 description: Page index du site (texte descriptif court + liste projets en cours)
 
+shownews: true
 header:
   description: Bienvenue dans la tanière de <span class="accent-text">Marmotte Productions</span> !
   image:

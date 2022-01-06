@@ -2,7 +2,7 @@ baseURL = "https://marmotteproductions.github.io/marmotteprod-siteproto/"
 languageCode = "fr-CH"
 title = "Marmotte Productions"
 theme = "yourfolio"
-disableKinds = [ "RSS", "taxonomy", "taxonomyTerm" ]
+disableKinds = [ "RSS" ]
 
 [[menu.main]]
 name = "News"
@@ -28,3 +28,4 @@ url = "/contact"
 env = "development"
 logoImage = "img/logo.png"
 logoImageAlt = "Marmotte Productions"
+mainSections = ['news', 'projets']

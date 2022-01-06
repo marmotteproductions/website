@@ -1,0 +1,21 @@
+{{- define "main" -}}
+{{ $taxo := "news" }}
+<div class="main-container">
+  {{- partial "navigation" . -}}
+  <div class="container">
+    <div class="padder">
+        <div class="categories clearfix bottom-space">
+        {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
+        {{ range .Pages }}
+        <div class="category">
+        <div class="category-labell">{{.Title}}</div>
+        <div class="category-content">{{.Date.Format "02.01.2006"}}</div>
+        <div class="category-content">{{.Content}}</div>
+        </div>
+        {{- end -}}
+    </div>
+    </div>
+  </div>
+</div>
+{{- end -}}
+{{- end -}}
