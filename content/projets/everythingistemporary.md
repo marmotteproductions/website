@@ -1,11 +1,14 @@
 ---
 title: "Everythingistemporary"
-date: 2021-10-10T12:53:28+02:00
+date: 2022-01-05T23:03:52+02:00
 draft: false
 description: test
 
 projects:
-  - image:
+  - title: Everything is temporary
+    type: Long-métrage documentaire de Juliette Klinke
+    link: /projets/everythingistemporary
+    image:
       url: everythingistemporary.jpg
       alt: Projet en développement
       media: "(max-width: 46.25em)"

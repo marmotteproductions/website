@@ -5,6 +5,12 @@
       {{- with .name -}}
         <div class="category-label">{{- . | safeHTML -}}</div>
       {{- end -}}
+      {{- with .namel -}}
+        <div class="category-labell">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .email -}}
+        <div class="category-email" style="position:absolute;"><br><br>{{- . | safeHTML -}}</div>
+      {{- end -}}
       {{- with .description -}}
         <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
