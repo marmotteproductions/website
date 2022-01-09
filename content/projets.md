@@ -2,7 +2,7 @@
 title: Projets
 date: 2017-11-01T18:28:28+02:00
 draft: false
-description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cumque magnam aliquid, explicabo amet quasi eveniet reprehenderit dolorum exercitationem maiores provident ex error, tenetur.
+description: Liste des projets de Marmotte Productions en cours de développement, pré-production, production ou post-production
 
 projects:
   - title: Everything is Temporary
