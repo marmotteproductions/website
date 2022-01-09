@@ -1,4 +1,4 @@
-baseURL = "https://marmotteproductions.github.io/marmotteprod-siteproto/"
+baseURL = "https://www.marmotteproductions.ch/"
 languageCode = "fr-CH"
 title = "Marmotte Productions"
 theme = "yourfolio"
@@ -25,7 +25,7 @@ weight = 4
 url = "/contact"
 
 [params]
-env = "development"
+env = "production"
 logoImage = "img/logo.png"
 logoImageAlt = "Marmotte Productions"
 mainSections = ['news', 'projets']
