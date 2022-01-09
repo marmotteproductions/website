@@ -23,7 +23,7 @@ text_groups:
   - name: Intro
     description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia esse aut, blanditiis ullam. Similique quo iusto ipsa, excepturi autem voluptate consectetur sit quae praesentium <span class="default-text bold-text">aliquam molestiae</span> minima ex perferendis aut unde tempora amet esse inventore quaerat molestias eum distinctio eligendi ducimus. Commodi voluptatem ab debitis inventore, laborum at maiores reiciendis dolor deleniti ipsam distinctio voluptas eos autem quidem a quia laboriosam similique soluta rem? Eum.
 projects:
-  - title: Everything is temporary
+  - title: Everything is Temporary
     type: Long-métrage documentaire de Juliette Klinke
     link: /projets/everythingistemporary
     image:

@@ -1,5 +1,5 @@
 ---
-title: About me
+title: À propos
 date: 2022-01-05T11:49:25+02:00
 draft: false
 description: À poropos de Marmotte productions et de ses fondateurs
@@ -25,12 +25,12 @@ portraits:
     link: charlotte
     class: short-col
     image:
-      url: /img/charlotte.png
+      url: portraits/charlotte.png
       alt: Portrait de Charlotte Klinke
       media: "(max-width: 46.25em)"
       params:
-      - options: 364x590 Top
-      - options: 848x443 Top
+      - options: 364x590 Fit
+      - options: 848x443 Fit
       - options: 565x420
       - options: 360x318
   - title: Gaspard Vignon
@@ -38,12 +38,12 @@ portraits:
     link: gaspard
     class: short-col
     image:
-      url: /img/gaspard.png
+      url: portraits/gaspard.png
       alt: Portrait de Gaspard Vignon
       media: "(max-width: 46.25em)"
       params:
-      - options: 364x590 Top
-      - options: 848x443 Top
+      - options: 364x590 Fit
+      - options: 848x443 Fit
       - options: 565x420
       - options: 360x318
   - title: Julien Bono
@@ -51,12 +51,12 @@ portraits:
     link: julien
     class: short-col
     image:
-      url: /img/julien.jpg
+      url: portraits/julien.jpg
       alt: Portrait de Julien Bono
       media: "(max-width: 46.25em)"
       params:
-      - options: 364x590 Top
-      - options: 848x443 Top
+      - options: 364x590 Fit
+      - options: 848x443 Fit
       - options: 565x420
       - options: 360x318
 ---

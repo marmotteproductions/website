@@ -5,7 +5,7 @@ draft: false
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor cumque magnam aliquid, explicabo amet quasi eveniet reprehenderit dolorum exercitationem maiores provident ex error, tenetur.
 
 projects:
-  - title: Everything is temporary
+  - title: Everything is Temporary
     type: Long-métrage documentaire de Juliette Klinke
     link: /projets/everythingistemporary
     image:

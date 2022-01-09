@@ -9,7 +9,7 @@
         {{ range .Pages }}
         <div class="category">
         <div class="category-labell">{{.Title}}</div>
-        <div class="category-content">{{.Date.Format "02.01.2006"}}</div>
+        <div class="category-label">{{.Date.Format "02.01.2006"}}</div>
         <div class="category-content">{{.Content}}</div>
         </div>
         {{- end -}}
