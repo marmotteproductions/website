@@ -17,7 +17,7 @@ projects:
       - options: 848x443
       - options: 565x420
       - options: 360x318 Left
-  - title: La Lune se lève
+  - title: La lune se lève
     type: Court-métrage de fiction de Gaspard Vignon
     link: /projets/laluneseleve
     image:
