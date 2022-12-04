@@ -1,3 +1,6 @@
 [submodule "themes/yourfolio"]
 	path = themes/yourfolio
 	url = https://github.com/serg/yourfolio.git
+[submodule "content"]
+	path = content
+	url = git@github.com:marmotteproductions/website-content.git
