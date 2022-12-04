@@ -1,7 +1,7 @@
 baseURL = "https://www.marmotteproductions.ch/"
 languageCode = "fr-CH"
 title = "Marmotte Productions"
-theme = "yourfolio"
+theme = ["hugo-cloak-email", "yourfolio"]
 disableKinds = [ "RSS" ]
 
 [[menu.main]]

@@ -4,3 +4,6 @@
 [submodule "content"]
 	path = content
 	url = git@github.com:marmotteproductions/website-content.git
+[submodule "themes/hugo-cloak-email"]
+	path = themes/hugo-cloak-email
+	url = https://github.com/martignoni/hugo-cloak-email.git
