@@ -26,8 +26,8 @@ jobs:
 
       - name: Commit updates for content submodule
         run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
+          git config user.email "webmotte@marmotteproductions.ch"
+          git config user.name "Marmotte"
           git add --all
           git commit -m "chore: Updated content" || echo "No changes to commit"
           git push
