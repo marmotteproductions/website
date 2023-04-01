@@ -127,8 +127,15 @@
 
   &-type {
     margin-top: .5em;
-    font-size: 1.4em;
+    font-size: 1.8em;
     text-transform: uppercase;
+  }
+
+  &-desc {
+    margin-top: 2.5em;
+    font-size: 1.4em;
+    text-align: justify;
+    text-justify: inter-word;
   }
 }
 
@@ -253,7 +260,13 @@
     }
 
     &-type {
-      font-size: 1.6em;
+      font-size: 1.7em;
+    }
+
+    &-desc {
+      font-size: 1.3em;
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 }

@@ -13,6 +13,9 @@
             {{- with .type -}}
               <div class="break-word project-type">{{.}}</div>
             {{- end -}}
+            {{- with .description -}}
+            <div class="break-word project-desc">{{.}}</div>
+          {{- end -}}
           </div>
         </div>
       </a>
