@@ -1,0 +1,32 @@
+{{with .Params.projects}}
+<div class="categories clearfix bottom-space">
+  {{- range . -}}
+    <div class="category{{with .class}} {{.}}{{end}}">
+      {{- with .real -}}
+        <div class="category-label">Réalisation</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .prod -}}
+        <div class="category-label">Production</div>
+        <div class="category-content">{{- $prods := delimit . ", " -}}{{ $prods }}</div>
+      {{- end -}}
+      {{- with .status -}}
+        <div class="category-label">Statut</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .release -}}
+        <div class="category-label">Sortie</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .pitch -}}
+        <div class="category-label">Pitch</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .description -}}
+        <div class="category-label">Description</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}    
+    </div>
+  {{- end -}}
+</div>
+{{- end -}}
