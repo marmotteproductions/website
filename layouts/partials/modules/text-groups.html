@@ -14,6 +14,12 @@
       {{- with .description -}}
         <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
+      {{- with .portrait -}}
+        <div class="category-portrait">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .bio -}}
+        <div class="category-bio">{{- . | safeHTML -}}</div>
+      {{- end -}}
     </div>
   {{- end -}}
 </div>

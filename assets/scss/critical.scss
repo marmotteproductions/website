@@ -128,6 +128,12 @@
     font-size: 1.8em;
     font-weight: 600;
   }
+
+  &-bio {
+    color: $group-text-color;
+    font-size: 1.8em;
+    font-weight: 600;
+  }
 }
 
 .animated {
@@ -321,6 +327,14 @@
     &-content {
       width: 80%;
     }
+
+    &-bio {
+      width: 70%;
+    }
+
+    &-portrait {
+      width: 30%;
+    }
   }
 
   .projects {
@@ -349,6 +363,14 @@
 
     &-content {
       width: 80%;
+    }
+
+    &-bio {
+      width: 60%;
+    }
+
+    &-portrait {
+      width: 40%;
     }
   }
 }
