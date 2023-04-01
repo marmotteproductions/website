@@ -7,7 +7,9 @@
       {{- partial "modules/portraits" . -}}
       {{- partial "modules/text-groups" . -}}
       {{- partial "modules/news" . -}}
-      {{- partial "modules/projects" . -}}
+      {{ range where .Site.RegularPages "Type" "projet" }}
+        {{- partial "modules/projects" . -}}
+      {{ end }}
       {{- partial "modules/footer" . -}}
     </div>
   </div>

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="main-container">
+    {{- partial "navigation" . -}}
+    {{- partial "header" . -}}
+    <div class="container">
+      <div class="padder">
+  {{ range where .Site.RegularPages "Type" "projet" }}
+      {{- partial "modules/projects" . -}}
+  {{ end }}
+  {{- partial "modules/footer" . -}}
+        </div>
+    </div>
+</div>
+{{ end }}

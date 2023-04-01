@@ -70,8 +70,8 @@
 }
 
 .projects {
-  margin-top: 4.5em;
-  margin-bottom: 3.5em;
+  //margin-top: 4.5em;
+  //margin-bottom: 3.5em;
 }
 
 .project {
@@ -131,8 +131,8 @@
     text-transform: uppercase;
   }
 
-  &-desc {
-    margin-top: 2.5em;
+  &-pitch {
+    margin-top: 1.8em;
     font-size: 1.4em;
     text-align: justify;
     text-justify: inter-word;
@@ -247,8 +247,8 @@
 //361
 @media only screen and (min-width: 22.5625em) {
   .projects {
-    margin-top: 7.5em;
-    margin-bottom: 6em;
+    //margin-top: 7.5em;
+    //margin-bottom: 6em;
   }
 }
 
@@ -263,7 +263,7 @@
       font-size: 1.7em;
     }
 
-    &-desc {
+    &-pitch {
       font-size: 1.3em;
       text-align: justify;
       text-justify: inter-word;
@@ -282,14 +282,14 @@
   }
 
   .projects {
-    margin-top: 10em;
+    //margin-top: 10em;
     margin-left: -0.88495%; //10px of 1130px container
     margin-right: -0.88495%;
   }
 
   .project {
     display: inline-block;
-    margin: 0 0.8% 1.73912%; //10px and 20px of 1150px container
+    margin: 0 0.8% 0.8%; //10px and 20px of 1150px container
 
     &-caption {
       padding: 3.7em 2.5em 3.7em 3em;
