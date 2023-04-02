@@ -250,6 +250,20 @@
     //margin-top: 7.5em;
     //margin-bottom: 6em;
   }
+
+  .project {
+    &-title {
+      font-size: 2em;
+    }
+
+    &-type {
+      font-size: 1em;
+    }
+
+    &-pitch {
+      font-size: 1.2em;
+    }
+  }
 }
 
 //446
@@ -265,8 +279,6 @@
 
     &-pitch {
       font-size: 1.3em;
-      text-align: justify;
-      text-justify: inter-word;
     }
   }
 }
@@ -298,6 +310,11 @@
     &-title {
       font-size: 4em;
       max-height: 4.8em;
+    }
+
+    &-pitch {
+      font-size: 2em;
+      max-height: 2.8em;
     }
   }
 }
