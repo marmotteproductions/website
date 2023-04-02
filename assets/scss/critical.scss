@@ -107,7 +107,7 @@
     font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0.472em;
+    //margin-bottom: 0.472em;
   }
 
   &-title {
@@ -127,6 +127,7 @@
     color: $group-text-color;
     font-size: 1.8em;
     font-weight: 600;
+    margin-bottom: 1em;
   }
 
   &-bio {
@@ -225,7 +226,7 @@
     //margin-top: 5em;
 
     &-label {
-      margin-bottom: 1em;
+      //margin-bottom: 1em;
     }
 
     &-title {
@@ -326,6 +327,7 @@
 
     &-content {
       width: 80%;
+      margin-bottom: 0;
     }
 
     &-bio {
