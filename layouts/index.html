@@ -7,8 +7,12 @@
       {{- partial "modules/portraits" . -}}
       {{- partial "modules/text-groups" . -}}
       {{- partial "modules/news" . -}}
-      {{ range where .Site.RegularPages "Type" "projet" }}
-        {{- partial "modules/projects" . -}}
+      {{ $projects := where .Site.RegularPages "Type" "projet" }}
+      {{ $sortedProjects := sort $projects ".Params.date" "desc" }}
+      {{ range $sortedProjects }}
+        {{ if .Params.showonmain }}
+          {{- partial "modules/projects" . -}}
+        {{ end }}
       {{ end }}
       {{- partial "modules/footer" . -}}
     </div>

@@ -10,9 +10,15 @@
             {{- with .title -}}
               <div class="break-word project-title">{{.}}</div>
             {{- end -}}
-            {{- with .type -}}
-              <div class="break-word project-type">{{.}}</div>
-            {{- end -}}
+            <div class="break-word project-type">
+              {{- with .type -}}
+                {{.}}
+              {{- end }}
+              {{ with .real -}}
+               de 
+                {{.}}
+              {{- end -}}
+            </div>
             {{- with .pitch -}}
             <div class="break-word project-pitch">{{.}}</div>
           {{- end -}}
