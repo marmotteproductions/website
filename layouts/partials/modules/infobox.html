@@ -6,13 +6,25 @@
         <div class="category-label">Réalisation</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
+      {{- with .scenario -}}
+      <div class="category-label">Scénario</div>
+      <div class="category-content">{{- $scenaristes := delimit . ", " -}}{{ $scenaristes }}</div>
+      {{- end -}}
       {{- with .prod -}}
         <div class="category-label">Production</div>
         <div class="category-content">{{- $prods := delimit . ", " -}}{{ $prods }}</div>
       {{- end -}}
+      {{- with .type -}}
+      <div class="category-label">Type</div>
+      <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
       {{- with .status -}}
         <div class="category-label">Statut</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .duree -}}
+      <div class="category-label">Durée</div>
+      <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
       {{- with .release -}}
         <div class="category-label">Sortie</div>
