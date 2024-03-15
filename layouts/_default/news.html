@@ -1,22 +1,26 @@
 {{- define "main" -}}
 {{ $taxo := "news" }}
+{{ $newsPages := where .Site.RegularPages "Type" $taxo }}
 <div class="main-container">
   {{- partial "navigation" . -}}
   <div class="container">
     <div class="padder">
-        <div class="categories clearfix bottom-space">
-        {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
-        {{ range .Pages }}
-          <div class="category">
-            <div class="category-title">{{.Title}}</div>
-            <div class="category-label">{{.Date.Format "02.01.2006"}}</div>
-            <div class="category-content">{{.Content}}</div>
+      <div class="posts-list clearfix bottom-space">
+        {{ range ($newsPages.ByDate.GroupByDate "2006") }}
+        <div class="posts-list">
+          <div class="year">{{ .Key }}</div>
+          {{ range .Pages }}
+          <div class="post">
+              <div class="date">{{ .Date.Format "02.01.2006" }}</div>
+              <h1>{{ .Title }}</h1>
+              <div class="content">{{ .Content }}</div>
           </div>
-        {{- end -}}
+          {{- end }}
         </div>
+        {{- end }}
+      </div>
         {{- partial "modules/footer" . -}}
     </div>
   </div>
 </div>
-{{- end -}}
 {{- end -}}

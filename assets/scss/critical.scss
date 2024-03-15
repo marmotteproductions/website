@@ -137,6 +137,47 @@
   }
 }
 
+.post h1, .post h2 {
+  position: relative;
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.post .content {
+  font-size: 1.85em;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.posts-list {
+  position: relative;
+  top: 0;
+}
+
+.posts-list .year {
+  display: inline-block;
+  font-size: 3em;
+  font-weight: 700;
+  color: rgb(50, 50, 50);
+  left: 0px;
+  padding-top: 0;
+}
+
+.posts-list .year::before {
+  content: "";
+  display: block;
+  height: 1em;
+}
+
+.posts-list .date {
+  font-size: 1.75em;
+  font-weight: 500;
+  color: #696969;
+  left: 0px;
+  padding-top: 0;
+}
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -241,6 +282,37 @@
     h1 {
       font-size: 5.2em;
     }
+  }
+
+  .post h1, .post h2 {
+    font-size: 2.5em;
+    padding-left: 111px;
+  }
+
+  .post .content {
+    padding-left: 111px;
+  }
+
+  .posts-list {
+    position: relative;
+    padding-top: 10px;
+  }
+
+  .posts-list .year {
+    font-size: 3em;
+    font-weight: 700;
+    width: 75px;
+  }
+
+  .posts-list .year::before {
+    height: 0em;
+  }
+
+  .posts-list .date {
+    display: inline-block;
+    position: absolute;
+    transform: translateY(5px);
+    width: 130px;
   }
 }
 
