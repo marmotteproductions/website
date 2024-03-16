@@ -45,11 +45,10 @@
       {{- with .trailer -}}
         <div class="category-label">Bande annonce</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-{{- end -}}
-
+      {{- end -}}
       {{- with .pressrelease -}}
       <div class="category-label">Dossier de presse</div>
-      <div class="category-content"><a href="{{ .pressrelease | safeURL }}">télécharger</a></div>
+      <div class="category-content"><a href="{{ . | safeURL }}">télécharger</a></div>
     {{- end -}}    
     </div>
   {{- end -}}
