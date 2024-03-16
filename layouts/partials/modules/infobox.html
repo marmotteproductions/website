@@ -22,13 +22,17 @@
         <div class="category-label">Statut</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
-      {{- with .duree -}}
-      <div class="category-label">Durée</div>
-      <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- with .diffusion -}}
+        <div class="category-label">Diffusions</div>
+        <div class="category-content">{{- $diffusions := delimit . "; " -}}{{ $diffusions }}</div>
       {{- end -}}
       {{- with .release -}}
         <div class="category-label">Sortie</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
+      {{- end -}}
+      {{- with .duree -}}
+      <div class="category-label">Durée</div>
+      <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}
       {{- with .pitch -}}
         <div class="category-label">Pitch</div>
@@ -38,6 +42,15 @@
         <div class="category-label">Description</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
       {{- end -}}    
+      {{- with .trailer -}}
+        <div class="category-label">Bande annonce</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+{{- end -}}
+
+      {{- with .pressrelease -}}
+      <div class="category-label">Dossier de presse</div>
+      <div class="category-content"><a href="{{ .pressrelease | safeURL }}">télécharger</a></div>
+    {{- end -}}    
     </div>
   {{- end -}}
 </div>
