@@ -33,7 +33,7 @@ jobs:
           git push
           
       - name: Setup Hugo
-        uses: uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d
+        uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d
         with:
           hugo-version: 'latest'
           extended: true
