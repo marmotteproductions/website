@@ -3,6 +3,8 @@
 {{ $regex := "(C’est, dans le désordre, )(.+)(Gaspard Vignon, Charlotte Klinke, Julien Bono)" }}
 {{ $matches := findRE $regex $description }}
 
+{{ $output := "" }}
+
 {{ if ne $matches nil }}
   {{ $prefix := index $matches 1 }}
   {{ $names := index $matches 3 }}
@@ -18,10 +20,10 @@
     {{ end }}
   {{ end }}
 
-  {{ $output := print $prefix $shuffledNamesStr }}
+  {{ $output = print $prefix $shuffledNamesStr }}
 
 {{ else }}
-  {{ $output := $description }}
+  {{ $output = $description }}
 {{ end }}
 
 {{ $output }}
