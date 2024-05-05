@@ -1,0 +1,27 @@
+{{ $description := index .Params "description" }}
+
+{{ $regex := "(C’est, dans le désordre, )(.+)(Gaspard Vignon, Charlotte Klinke, Julien Bono)" }}
+{{ $matches := findRE $regex $description }}
+
+{{ if ne $matches nil }}
+  {{ $prefix := index $matches 1 }}
+  {{ $names := index $matches 3 }}
+  {{ $namesList := split $names ", " }}
+  {{ $shuffledNames := shuffle $namesList }}
+  {{ $shuffledNamesStr := "" }}
+
+  {{ range $index, $name := $shuffledNames }}
+    {{ if eq $index 0 }}
+      {{ $shuffledNamesStr = print $name }}
+    {{ else }}
+      {{ $shuffledNamesStr = print $shuffledNamesStr ", " $name }}
+    {{ end }}
+  {{ end }}
+
+  {{ $output := print $prefix $shuffledNamesStr }}
+
+{{ else }}
+  {{ $output := $description }}
+{{ end }}
+
+{{ $output }}

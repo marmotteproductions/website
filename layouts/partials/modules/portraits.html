@@ -1,7 +1,9 @@
 {{$page := .}}
 {{- with .Params.portraits -}}
+{{ $shuffledPortraits := shuffle . }}
+
 <ul class="portraits clearfix">
-  {{- range . -}}
+  {{- range $shuffledPortraits -}}
     <li class="project{{with .class}} {{.}}{{end}}">
       <a href="{{.link}}">
         {{- partial "modules/image" (dict "image" .image "page" $page) -}}
