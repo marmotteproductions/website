@@ -5,7 +5,8 @@
     <div class="container">
       <div class="padder">
   {{ range where .Site.RegularPages "Type" "projet"}}
-    {{ if or (not .Params.released) (.Params.released | eq false) }}
+  {{ partial "mirror_contents.html" . }}
+    {{ if and (.Params.released) (.Params.released | eq true) }}
       {{- partial "modules/projects" . -}}
     {{ end }}
   {{ end }}

@@ -1,0 +1,19 @@
+{{ $source := "/projets" }}
+{{ $destination := "/films" }}
+
+{{ $sourcePages := where .Site.RegularPages "Section" "==" $source }}
+
+{{ range $sourcePages }}
+    {{ $newPath := replace .File.Dir $source $destination }}
+    {{ $newPath := printf "%s/%s" $newPath .File.BaseFileName }}
+    {{ with .Content }}
+        {{ . | safeHTML }}
+    {{ end }}
+
+    {{ $resources := .Resources.Match "**" }}
+    {{ range $resources }}
+        {{ $relPath := replace .RelPermalink $source $destination }}
+        {{ $relPath := printf "%s/%s" $relPath .RelPermalink }}
+        <img src="{{ $relPath }}" alt="{{ .Title }}">
+    {{ end }}
+{{ end }}
