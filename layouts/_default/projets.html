@@ -5,7 +5,7 @@
     <div class="container">
       <div class="padder">
   {{ range where .Site.RegularPages "Type" "projet"}}
-    {{ if or (not .Params.released) (.Params.released | eq false) }}
+    {{ if or (not .Params.released) (eq .Params.released "false") }}
       {{- partial "modules/projects" . -}}
     {{ end }}
   {{ end }}
