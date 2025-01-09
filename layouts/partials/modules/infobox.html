@@ -28,16 +28,34 @@
       {{- end -}}
       {{- with .diffusion -}}
         <div class="category-label">Diffusions</div>
-        <div class="category-content">{{- $diffusions := delimit . "; " -}}{{ $diffusions }}</div>
-      {{- end -}}
+        <div class="category-content">
+          <ul>
+            {{- range . }}
+              <li>{{ . | safeHTML }}</li>
+            {{- end }}
+          </ul>
+        </div>
+      {{- end }}
       {{- with .awards -}}
-        <div class="category-label">Récompenses</div>
-        <div class="category-content">{{- $awardss := delimit . "; " -}}{{ $awardss }}</div>
-      {{- end -}}
+        <div class="category-label">Awards</div>
+        <div class="category-content">
+          <ul>
+            {{- range . }}
+              <li>{{ . | safeHTML }}</li>
+            {{- end }}
+          </ul>
+        </div>
+      {{- end }}
       {{- with .nextshowings -}}
         <div class="category-label">Prochaines diffusions</div>
-        <div class="category-content">{{- $nextshowingss := delimit . "; " -}}{{ $nextshowingss }}</div>
-      {{- end -}}
+        <div class="category-content">
+          <ul>
+            {{- range . }}
+              <li>{{ . | safeHTML }}</li>
+            {{- end }}
+          </ul>
+        </div>
+      {{- end }}
       {{- with .duree -}}
       <div class="category-label">Durée</div>
       <div class="category-content">{{- . | safeHTML -}}</div>
