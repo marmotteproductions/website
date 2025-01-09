@@ -107,7 +107,7 @@
     font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
-    //margin-bottom: 0.472em;
+    margin-bottom: 0.2em;
   }
 
   &-title {
@@ -127,7 +127,7 @@
     color: $group-text-color;
     font-size: 1.8em;
     font-weight: 600;
-    margin-bottom: 1em;
+    margin-bottom: 0.2em;
   }
 
   &-bio {
@@ -271,7 +271,7 @@
     }
 
     &-title {
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
   }
 }
@@ -394,12 +394,12 @@
 
     &-label {
       width: 20%;
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
 
     &-content {
       width: 80%;
-      margin-bottom: 0;
+      //margin-bottom: 0;
     }
 
     &-bio {
