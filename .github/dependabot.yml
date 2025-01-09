@@ -14,3 +14,6 @@ updates:
       prefix: "chore/build: "
     reviewers:
       - "fetzu"
+    ignore:
+      - dependency-name: "themes/hugo-cloak-email"
+      - dependency-name: "themes/yourfolio"
