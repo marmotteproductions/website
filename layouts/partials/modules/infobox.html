@@ -1,82 +1,80 @@
 {{with .Params.projects}}
 <div class="categories clearfix bottom-space">
-  {{- range . -}}
+    {{- range . -}}
     <div class="category{{with .class}} {{.}}{{end}}">
-      {{- with .real -}}
+        {{- with .real -}}
         <div class="category-label">Réalisation</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .scenario -}}
-      <div class="category-label">Scénario</div>
-      <div class="category-content">{{- $scenaristes := delimit . ", " -}}{{ $scenaristes }}</div>
-      {{- end -}}
-      {{- with .prod -}}
+        {{- end -}} {{- with .scenario -}}
+        <div class="category-label">Scénario</div>
+        <div class="category-content">
+            {{- $scenaristes := delimit . ", " -}}{{ $scenaristes }}
+        </div>
+        {{- end -}} {{- with .prod -}}
         <div class="category-label">Production</div>
-        <div class="category-content">{{- $prods := delimit . ", " -}}{{ $prods }}</div>
-      {{- end -}}
-      {{- with .type -}}
-      <div class="category-label">Type</div>
-      <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .status -}}
+        <div class="category-content">
+            {{- $prods := delimit . ", " -}}{{ $prods }}
+        </div>
+        {{- end -}} {{- with .type -}}
+        <div class="category-label">Type</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+        {{- end -}} {{- with .status -}}
         <div class="category-label">Statut</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .release -}}
+        {{- end -}} {{- with .release -}}
         <div class="category-label">Sortie</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .diffusion -}}
+        {{- end -}} {{- with .diffusion -}}
         <div class="category-label">Diffusions</div>
         <div class="category-content">
-          <ul>
-            {{- range . }}
-              <li>- {{ . | safeHTML }}</li>
-            {{- end }}
-          </ul>
+            <ul>
+                {{- range . }}
+                <li>- {{ . | safeHTML }}</li>
+                {{- end }}
+            </ul>
         </div>
-      {{- end }}
-      {{- with .awards -}}
+        {{- end }} {{- with .awards -}}
         <div class="category-label">Awards</div>
         <div class="category-content">
-          <ul>
-            {{- range . }}
-              <li>- {{ . | safeHTML }}</li>
-            {{- end }}
-          </ul>
+            <ul>
+                {{- range . }}
+                <li>- {{ . | safeHTML }}</li>
+                {{- end }}
+            </ul>
         </div>
-      {{- end }}
-      {{- with .nextshowings -}}
+        {{- end }} {{- with .nextshowings -}}
         <div class="category-label">Prochaines diffusions</div>
         <div class="category-content">
-          <ul>
-            {{- range . }}
-              <li>- {{ . | safeHTML }}</li>
-            {{- end }}
-          </ul>
+            <ul>
+                {{- range . }}
+                <li>- {{ . | safeHTML }}</li>
+                {{- end }}
+            </ul>
         </div>
-      {{- end }}
-      {{- with .duree -}}
-      <div class="category-label">Durée</div>
-      <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .pitch -}}
+        {{- end }} {{- with .duree -}}
+        <div class="category-label">Durée</div>
+        <div class="category-content">{{- . | safeHTML -}}</div>
+        {{- end -}} {{- with .pitch -}}
         <div class="category-label">Pitch</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .description -}}
+        {{- end -}} {{- with .description -}}
         <div class="category-label">Description</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}    
-      {{- with .trailer -}}
+        {{- end -}} {{- with .trailer -}}
         <div class="category-label">Bande annonce</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-      {{- end -}}
-      {{- with .pressrelease -}}
-      <div class="category-label">Dossier de presse</div>
-      <div class="category-content"><a href="{{ . | safeURL }}">télécharger</a></div>
-    {{- end -}}    
+        {{- end -}} {{- with .pressrelease -}}
+        <div class="category-label">Dossier de presse</div>
+        <div class="category-content">
+            <a href="{{ . | safeURL }}">télécharger</a>
+        </div>
+        {{- end -}} {{- with .mediakit -}}
+        <div class="category-label">Visuels pour médias</div>
+        <div class="category-content">
+            <a href="{{ . | safeURL }}">télécharger</a>
+        </div>
+        {{- end -}}
     </div>
-  {{- end -}}
+    {{- end -}}
 </div>
 {{- end -}}
