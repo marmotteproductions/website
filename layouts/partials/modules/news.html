@@ -8,11 +8,10 @@
 
         <div class="category-content">
             <ul>
-            <!-- Ranges through pages in category "news" -->
             {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
             {{ range first 5 .Pages }}
                 <li>
-                    {{.Date.Format "02.01.2006"}} | <a href="news">{{.Title}}</a>
+                    {{.Date.Format "02.01.2006"}} | <a href="{{.RelPermalink}}">{{.Title}}</a>
                 </li>
             {{ end }}
             {{ end }}

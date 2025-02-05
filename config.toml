@@ -34,3 +34,11 @@ env = "production"
 logoImage = "img/logo.png"
 logoImageAlt = "Marmotte Productions"
 mainSections = ['news', 'projets']
+
+[permalinks]
+  news = "/news/:year/:month/:day/:slug"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

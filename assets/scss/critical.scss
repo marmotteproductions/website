@@ -461,3 +461,21 @@
     right: -100%;
   }
 }
+
+//Lists
+ul, ol {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+ul {
+  list-style-type: "- ";
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-left: 20px;
+}

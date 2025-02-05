@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<div class="main-container">
+  {{- partial "navigation" . -}}
+  <div class="container">
+    <div class="padder">
+      <div class="posts-list clearfix bottom-space">
+        <div class="post">
+          <div class="date">{{ .Date.Format "02.01.2006" }}</div>
+          <h1>{{ .Title }}</h1>
+          <div class="content">{{ .Content }}</div>
+        </div>
+      </div>
+      {{- partial "modules/footer" . -}}
+    </div>
+  </div>
+</div>
+{{- end -}}
