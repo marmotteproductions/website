@@ -12,7 +12,7 @@
           {{ range .Pages }}
           <div class="post">
               <div class="date">{{ .Date.Format "02.01.2006" }}</div>
-              <h1>{{ .Title }}</h1>
+              <h1><a href="{{.RelPermalink}}">{{.Title}}</a></h1>
               <div class="content">{{ .Content }}</div>
           </div>
           {{- end }}
