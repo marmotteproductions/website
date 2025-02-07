@@ -479,3 +479,9 @@ ol {
 ul ul, ul ol, ol ol, ol ul {
   margin-left: 20px;
 }
+
+ul.news-items {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}

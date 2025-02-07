@@ -7,7 +7,7 @@
         </div>
 
         <div class="category-content">
-            <ul>
+            <ul class="news-items">
             {{ with ($.Site.GetPage (printf "/%s" $taxo)) }}
             {{ range first 5 .Pages }}
                 <li>
