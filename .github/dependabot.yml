@@ -10,4 +10,3 @@ updates:
       prefix: "chore/build: "
     reviewers:
       - "fetzu"
-    open-pull-requests-limit: 10x
