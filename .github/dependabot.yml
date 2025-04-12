@@ -1,19 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directory: "/.github/workflows"
     schedule:
       interval: "monthly"
       day: "sunday"
       time: "18:00"
-    groups:
-      github-actions:
-        patterns:
-          - "*"
     commit-message:
       prefix: "chore/build: "
     reviewers:
       - "fetzu"
-    ignore:
-      - dependency-name: "themes/hugo-cloak-email"
-      - dependency-name: "themes/yourfolio"
+    open-pull-requests-limit: 10x
