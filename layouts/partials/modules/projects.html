@@ -18,6 +18,11 @@
                de 
                 {{.}}
               {{- end -}}
+              {{- with .status -}}
+               (
+                {{.}}
+               )
+              {{- end }}
             </div>
             {{- with .pitch -}}
             <div class="break-word project-pitch">{{.}}</div>
