@@ -33,8 +33,8 @@
           {{range $index, $imgPath := $shuffledImages}}
             {{$original := $imageBundle.Resources.GetMatch $imgPath}}
             {{with $original}}
-              {{/* Process image: Fill to 1130x500, then apply grayscale */}}
-              {{$processed := .Fill "1130x500"}}
+              {{/* Process image: Fill to 1130x500 with Smart anchor to detect important content */}}
+              {{$processed := .Fill "1130x500 Smart"}}
               <div class="carousel-slide{{if eq $index 0}} active{{end}}" data-index="{{$index}}">
                 <img src="{{$processed.RelPermalink}}" alt="Project cover" loading="{{if eq $index 0}}eager{{else}}lazy{{end}}" />
                 <div class="carousel-vignette"></div>
