@@ -499,6 +499,7 @@ ul.news-items {
 .carousel-slide {
   display: none;
   width: 100%;
+  position: relative;
 
   &.active {
     display: block;
@@ -524,33 +525,25 @@ ul.news-items {
     filter: grayscale(100%) brightness(1.6) contrast(0.5);
     opacity: 0.6;
   }
+}
 
-  // Picture element contains the vignette overlay
-  picture {
-    display: block;
-    position: relative;
-    width: 100%;
-
-    // Vignette overlay to blend edges with #f1f1f1 background
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      // Very strong radial gradient vignette - image should dissolve into background
-      background: radial-gradient(
-        ellipse at center,
-        transparent 0%,
-        rgba(241, 241, 241, 0.3) 30%,
-        rgba(241, 241, 241, 0.6) 50%,
-        rgba(241, 241, 241, 0.85) 70%,
-        $hero-color 85%
-      );
-    }
-  }
+// Vignette overlay element - positioned over the image
+.carousel-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  // Very strong radial gradient vignette - image should dissolve into background
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(241, 241, 241, 0.3) 30%,
+    rgba(241, 241, 241, 0.6) 50%,
+    rgba(241, 241, 241, 0.85) 70%,
+    #f1f1f1 85%
+  );
 }
 
 // Slide animations

@@ -36,9 +36,8 @@
               {{/* Process image: Fill to 1130x500, then apply grayscale */}}
               {{$processed := .Fill "1130x500"}}
               <div class="carousel-slide{{if eq $index 0}} active{{end}}" data-index="{{$index}}">
-                <picture>
-                  <img src="{{$processed.RelPermalink}}" alt="Project cover" loading="{{if eq $index 0}}eager{{else}}lazy{{end}}" />
-                </picture>
+                <img src="{{$processed.RelPermalink}}" alt="Project cover" loading="{{if eq $index 0}}eager{{else}}lazy{{end}}" />
+                <div class="carousel-vignette"></div>
               </div>
             {{end}}
           {{end}}
