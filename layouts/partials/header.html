@@ -1,0 +1,63 @@
+{{$header := .Params.header}}
+{{$imageBundle := .Site.GetPage "uploads"}}
+
+{{/* Check if this is the homepage */}}
+{{if .IsHome}}
+<div class="header">
+  <div class="container">
+    <div class="padder">
+      <div class="main-description animated fadeIn">
+        {{- with $header.description -}}
+          <h1 class="break-word">{{- . | safeHTML -}}</h1>
+        {{- end -}}
+
+        {{/* Carousel with project cover images */}}
+        <div class="hero-carousel" id="hero-carousel">
+          {{/* Collect all project cover images */}}
+          {{$projects := where .Site.RegularPages "Type" "projet"}}
+          {{$coverImages := slice}}
+
+          {{range $projects}}
+            {{range .Params.projects}}
+              {{with .image}}
+                {{$coverImages = $coverImages | append .url}}
+              {{end}}
+            {{end}}
+          {{end}}
+
+          {{/* Shuffle the images using Hugo's shuffle function */}}
+          {{$shuffledImages := shuffle $coverImages}}
+
+          {{/* Render carousel slides */}}
+          {{range $index, $imgPath := $shuffledImages}}
+            {{$original := $imageBundle.Resources.GetMatch $imgPath}}
+            {{with $original}}
+              {{/* Process image: Fill to 1130x500, then apply grayscale */}}
+              {{$processed := .Fill "1130x500"}}
+              <div class="carousel-slide{{if eq $index 0}} active{{end}}" data-index="{{$index}}">
+                <picture>
+                  <img src="{{$processed.RelPermalink}}" alt="Project cover" loading="{{if eq $index 0}}eager{{else}}lazy{{end}}" />
+                </picture>
+              </div>
+            {{end}}
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+{{/* Non-homepage: use original header behavior */}}
+<div class="header">
+  <div class="container">
+    <div class="padder">
+      <div class="main-description animated fadeIn">
+        {{- with $header.description -}}
+          <h1 class="break-word">{{- . | safeHTML -}}</h1>
+        {{- end -}}
+        {{- partial "modules/image" (dict "image" $header.image "page" .) -}}
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}
