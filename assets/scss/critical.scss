@@ -520,24 +520,20 @@ ul.news-items {
     width: 100%;
     height: auto;
     max-width: 100%;
-    // Greyscale + slightly less washed out for better visibility in center
-    filter: grayscale(100%) brightness(1.4) contrast(0.6);
-    opacity: 0.7;
-    // Apply vignette using CSS mask - stronger fade, especially at top for nav bar blend
+    // Greyscale with slight wash-out for text readability
+    filter: grayscale(100%) brightness(1.2) contrast(0.75);
+    opacity: 0.8;
+    // Apply vignette using CSS mask - starts very close to edge with quick fade
     mask-image: radial-gradient(
       ellipse farthest-side at center,
       black 0%,
-      black 25%,
-      rgba(0, 0, 0, 0.4) 50%,
-      rgba(0, 0, 0, 0.1) 70%,
+      black 70%,
       transparent 85%
     );
     -webkit-mask-image: radial-gradient(
       ellipse farthest-side at center,
       black 0%,
-      black 25%,
-      rgba(0, 0, 0, 0.4) 50%,
-      rgba(0, 0, 0, 0.1) 70%,
+      black 70%,
       transparent 85%
     );
   }
