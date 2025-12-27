@@ -485,3 +485,84 @@ ul.news-items {
   padding-left: 0;
   list-style-type: none;
 }
+
+// Hero Carousel Styles
+// Carousel positioned absolutely at bottom of .main-description, like the original image
+.hero-carousel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+
+  &.active {
+    display: block;
+    position: relative;
+    animation: slideIn 0.6s ease-in-out;
+  }
+
+  &.exiting {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: slideOut 0.6s ease-in-out forwards;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    // Greyscale + slightly less washed out for better visibility in center
+    filter: grayscale(100%) brightness(1.4) contrast(0.6);
+    opacity: 0.7;
+    // Apply vignette using CSS mask - stronger fade, especially at top for nav bar blend
+    mask-image: radial-gradient(
+      ellipse farthest-side at center,
+      black 0%,
+      black 25%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 85%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse farthest-side at center,
+      black 0%,
+      black 25%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.1) 70%,
+      transparent 85%
+    );
+  }
+
+  // Keep the vignette div but hide it - not needed with mask approach
+  .carousel-vignette {
+    display: none;
+  }
+}
+
+// Slide animations
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,63 @@
+{{$header := .Params.header}}
+{{$imageBundle := .Site.GetPage "uploads"}}
+
+{{/* Check if this is the homepage */}}
+{{if .IsHome}}
+<div class="header">
+  <div class="container">
+    <div class="padder">
+      <div class="main-description animated fadeIn">
+        {{- with $header.description -}}
+          <h1 class="break-word">{{- . | safeHTML -}}</h1>
+        {{- end -}}
+
+        {{/* Carousel with cover images from released Films only */}}
+        <div class="hero-carousel" id="hero-carousel">
+          {{/* Collect cover images only from released projects (Films) */}}
+          {{$projects := where .Site.RegularPages "Type" "projet"}}
+          {{$releasedProjects := where $projects ".Params.released" true}}
+          {{$coverImages := slice}}
+
+          {{range $releasedProjects}}
+            {{range .Params.projects}}
+              {{with .image}}
+                {{$coverImages = $coverImages | append .url}}
+              {{end}}
+            {{end}}
+          {{end}}
+
+          {{/* Shuffle the images using Hugo's shuffle function */}}
+          {{$shuffledImages := shuffle $coverImages}}
+
+          {{/* Render carousel slides */}}
+          {{range $index, $imgPath := $shuffledImages}}
+            {{$original := $imageBundle.Resources.GetMatch $imgPath}}
+            {{with $original}}
+              {{/* Process image: Fill to 1130x500 with Smart anchor to detect important content */}}
+              {{$processed := .Fill "1130x500 Smart"}}
+              <div class="carousel-slide{{if eq $index 0}} active{{end}}" data-index="{{$index}}">
+                <img src="{{$processed.RelPermalink}}" alt="Project cover" loading="{{if eq $index 0}}eager{{else}}lazy{{end}}" />
+                <div class="carousel-vignette"></div>
+              </div>
+            {{end}}
+          {{end}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{else}}
+{{/* Non-homepage: use original header behavior */}}
+<div class="header">
+  <div class="container">
+    <div class="padder">
+      <div class="main-description animated fadeIn">
+        {{- with $header.description -}}
+          <h1 class="break-word">{{- . | safeHTML -}}</h1>
+        {{- end -}}
+        {{- partial "modules/image" (dict "image" $header.image "page" .) -}}
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}
