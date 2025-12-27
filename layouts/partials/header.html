@@ -11,13 +11,14 @@
           <h1 class="break-word">{{- . | safeHTML -}}</h1>
         {{- end -}}
 
-        {{/* Carousel with project cover images */}}
+        {{/* Carousel with cover images from released Films only */}}
         <div class="hero-carousel" id="hero-carousel">
-          {{/* Collect all project cover images */}}
+          {{/* Collect cover images only from released projects (Films) */}}
           {{$projects := where .Site.RegularPages "Type" "projet"}}
+          {{$releasedProjects := where $projects ".Params.released" true}}
           {{$coverImages := slice}}
 
-          {{range $projects}}
+          {{range $releasedProjects}}
             {{range .Params.projects}}
               {{with .image}}
                 {{$coverImages = $coverImages | append .url}}
