@@ -525,31 +525,31 @@ ul.news-items {
     opacity: 0.6;
   }
 
-  // Vignette overlay to blend edges with #f1f1f1 background
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    // Very strong radial gradient vignette - image should dissolve into background
-    background: radial-gradient(
-      ellipse at center,
-      transparent 0%,
-      rgba(241, 241, 241, 0.3) 30%,
-      rgba(241, 241, 241, 0.6) 50%,
-      rgba(241, 241, 241, 0.85) 70%,
-      $hero-color 85%
-    );
-  }
-
-  // Ensure picture element is relative for the ::after overlay
+  // Picture element contains the vignette overlay
   picture {
     display: block;
     position: relative;
     width: 100%;
+
+    // Vignette overlay to blend edges with #f1f1f1 background
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      // Very strong radial gradient vignette - image should dissolve into background
+      background: radial-gradient(
+        ellipse at center,
+        transparent 0%,
+        rgba(241, 241, 241, 0.3) 30%,
+        rgba(241, 241, 241, 0.6) 50%,
+        rgba(241, 241, 241, 0.85) 70%,
+        $hero-color 85%
+      );
+    }
   }
 }
 
