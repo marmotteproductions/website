@@ -46,9 +46,7 @@
         <div class="category-label">Prochaines diffusions</div>
         <div class="category-content">
             <ul>
-                {{- range . }}
-                <li>- {{ . | safeHTML }}</li>
-                {{- end }}
+                {{- range . }} {{ . | safeHTML }} {{- end }}
             </ul>
         </div>
         {{- end }} {{- with .duree -}}
@@ -63,7 +61,22 @@
         {{- end -}} {{- with .trailer -}}
         <div class="category-label">Bande annonce</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-        {{- end -}} {{- with .pressrelease -}}
+        {{- end -}} {{ with .Params.vodlink }}
+        <div class="category-label">Liens VOD</div>
+        <div class="category-content">
+            {{ if reflect.IsSlice . }}
+            <ul>
+                {{ range . }}
+                <li>
+                    <a href="{{ .url | safeURL }}">{{ .label }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            {{ else }}
+            <a href="{{ .url | safeURL }}">{{ .label }}</a>
+            {{ end }}
+        </div>
+        {{ end }}{{- with .pressrelease -}}
         <div class="category-label">Dossier de presse</div>
         <div class="category-content">
             <a href="{{ . | safeURL }}">télécharger</a>
