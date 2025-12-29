@@ -64,7 +64,7 @@
         {{- end -}} {{ with .vodlink }}
         <div class="category-label">Liens VOD</div>
         <div class="category-content">
-            {{ if reflect.IsSlice . }}
+            {{ if reflect.IsSlice . }} {{ if gt (len .) 1 }}
             <ul>
                 {{ range . }}
                 <li>
@@ -72,11 +72,13 @@
                 </li>
                 {{ end }}
             </ul>
-            {{ else }}
+            {{ else }} {{ $item := index . 0 }}
+            <a href="{{ $item.url | safeURL }}">{{ $item.label }}</a>
+            {{ end }} {{ else }}
             <a href="{{ .url | safeURL }}">{{ .label }}</a>
             {{ end }}
         </div>
-        {{ end }}{{- with .pressrelease -}}
+        {{ end }} {{- with .pressrelease -}}
         <div class="category-label">Dossier de presse</div>
         <div class="category-content">
             <a href="{{ . | safeURL }}">télécharger</a>
