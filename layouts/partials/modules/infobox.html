@@ -33,16 +33,16 @@
                 {{ end }}
             </ul>
         </div>
-        {{ end }} {{- with .awards -}}
+        {{ end }} {{ with .awards }}
         <div class="category-label">Awards</div>
         <div class="category-content">
             <ul>
-                {{- range . }}
-                <li>- {{ . | safeHTML }}</li>
-                {{- end }}
+                {{ range . }}
+                <li>{{ . | safeHTML }}</li>
+                {{ end }}
             </ul>
         </div>
-        {{- end }} {{- with .nextshowings -}}
+        {{ end }} {{- with .nextshowings -}}
         <div class="category-label">Prochaines diffusions</div>
         <div class="category-content">
             <ul>
