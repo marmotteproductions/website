@@ -24,16 +24,16 @@
         {{- end -}} {{- with .release -}}
         <div class="category-label">Sortie</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-        {{- end -}} {{- with .diffusion -}}
+        {{- end -}} {{ with .diffusion }}
         <div class="category-label">Diffusions</div>
         <div class="category-content">
             <ul>
-                {{- range . }}
-                <li>- {{ . | safeHTML }}</li>
-                {{- end }}
+                {{ range . }}
+                <li>{{ . | safeHTML }}</li>
+                {{ end }}
             </ul>
         </div>
-        {{- end }} {{- with .awards -}}
+        {{ end }} {{- with .awards -}}
         <div class="category-label">Awards</div>
         <div class="category-content">
             <ul>
