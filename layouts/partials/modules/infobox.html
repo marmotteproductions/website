@@ -61,7 +61,7 @@
         {{- end -}} {{- with .trailer -}}
         <div class="category-label">Bande annonce</div>
         <div class="category-content">{{- . | safeHTML -}}</div>
-        {{- end -}} {{ with .Params.vodlink }}
+        {{- end -}} {{ with .vodlink }}
         <div class="category-label">Liens VOD</div>
         <div class="category-content">
             {{ if reflect.IsSlice . }}
